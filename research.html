@@ -1,0 +1,256 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Zheyun Feng's homepage</title>
+<meta name="keywords" content="Zheyun Feng's Homepage" />
+<meta name="description" content="Zheyun Feng's Homepage, Michigan State University" />
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<center>
+<div id="outer">
+<div id="header" align="center">
+
+<p>
+<span class="titletext">Research Projects</span><br>
+<span class="subtitletext1">Zheyun Feng</span><br>
+<span class="subtitletext2">Welcome to my homepage!</span>
+</p>
+<a><img src="images/Zheyun.png"></a>
+</div>
+
+<center>
+<div id="content" align="right">
+<div id="sidebar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="CV.html">Curriculum Vita</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<br>
+<center>
+<span class="subtitletext3">
+Find me:<br><br>
+<a href="https://www.linkedin.com/pub/zheyun-feng/2a/489/b21" target="_blank"><img src="images/LinkedIn_Icon.png"></a>&nbsp;<a href="https://github.com/fengzheyun/"><img src="images/github.gif"></a>
+</span>
+
+</center>
+</script>
+</div>
+
+<div id="main">
+
+<font color=#c80000><b>Large-scale Image Tagging with Metric Learning and Matrix Completion</b></font>
+<p align="left">In the last few years, image tagging problem has become an active research topic due to the urgent needs to categorize, retrieve and browse digital images via semantic keywords. However, manually labeling is labor costing, and tags crawled from the surrounding contexts of an image are usually problematic. To address these problem, we developed a set of automatic image tagging algorithms, based on <b>Machine Learning</b> techniques. </p>
+<ul>
+<li><span class="degree">Matrix Completion based Large-scale Image Tag Recovery</span> <span class="alignright">2013 - present</span></li>
+<p align="left">Generally, user-provided tags with images in social media are incomplete and noisy, so we propose an efficient semi-supervised algorithm to solve the problem of <b>tag completion</b> that is able to simultaneously fill out the missing tags and remove noisy tags, where the tag correlations are fully explored through a <b>matrix completion</b> component.</p>
+
+<p align="left">Following the topic model, the tags of each image are drawn independently from a small mixture of multinomial distributions, which can be interpreted as a low rank enforcement and could be achieved through a <b>nuclear norm minimizer</b>. We show theoretically with recovery error bounds that the proposed noisy tag matrix recovery algorithm is able to simultaneously recover the missing tags and de-emphasize the noisy tags even with a limited number of observations. In addition, a graph Laplacian based component is introduced to combine the noisy matrix recovery component with visual features. The scheme of the proposed algorithm is shown by clicking <a href="images/tcmr.png">here</a>. </p>
+
+<ul style="list-style-type:disc">
+  <li>Simultaneously enrich incomplete tags and remove noisy tags. </li>
+  <li>Explore the tag interactions (both between tag keywords and tags of different images) via a low rank matrix completion component. </li>
+  <li>Solve a convex optimization problem and thus computationally efficient. ( Most existing topic model solve a non-convex problem) </li>
+  <li>Provide theoretical guarantees, i.e., statistical error bounds</li>
+  <li>Capture the visual-tag dependency by a graph Laplacian</li>
+  <li>Precision and efficiency are greatly improved compared with state-of-the-art tag completion algorithms. </li>
+</ul>	
+<ul style="list-style-type:square">
+  <li>Adaptive to other image tagging tasks including image tag recommendation, tag ranking, and tag refinement.</li>
+  <li>Could be easily extend to other information media like document, music and audio tagging/labeling tasks, and sentiment analysis tasks as well.</li>
+  <li>Good scalability: adaptive to large datasets including NUS-WIDE(250K) and ImageNet 2014 (1.25M) in terms of both effectiveness and efficiency. (Codes for large scale data will come soon! :)</li>
+</ul>	
+<br>
+<p align="left">Songhe Feng, Zheyun Feng, and Rong Jin. "<i>Learning to Rank Image Tags with Limited Training Examples</i>". In IEEE Transactions on Image Processing (TIP), Vol. 24, NO. 4, April 2015. </p>
+<p align="left">Zheyun Feng, Songhe Feng, Rong Jin, and Anil K. Jain. "<i>Image Tag Completion by Noisy Matrix Recovery</i>". In European Conference of Computer Vision (ECCV), pp. 424-438, 2014.</p><br>
+
+<br>
+
+<li><span class="degree">Efficient Kernel Metric Learning for Large Scale Image Annotation</span> <span class="alignright">2012 - 2013</span></li>
+
+<p align="left">One of the key challenges in search-based image annotation models is to define an appropriate similarity measure between images. Many kernel distance metric learning algorithms have been developed in order to capture the nonlinear relationships between visual features and semantics of the images. One fundamental limitation in applying kernel metric learning to image annotation problem is that it requires converting image annotations into binary constraints, leading to a significant information loss. In addition, most kernel metric learning algorithms suffer from high computational cost due to the requirement that the learned matrix has to be positive semi-definitive (PSD).</p>
+
+<p align="left">We propose a robust <b>kernel metric learning</b> (RKML) algorithm based on the regression technique. We provide the theoretical guarantee, i.e., statistical error bounds, and verify its efficiency and effectiveness for image annotation on flickr 1M dataset by comparing it to both state-of-the-art distance metric learning and image annotation approaches. The framework of RKML can be referred by click <a href="images/rkml.png">here</a>.</p>
+
+<ul style="list-style-type:disc">
+  <li>Do not suffer from information loss by directly utilizing image annotations (effectiveness). </li>
+  <li>Alleviate the overfitting risk via a Low rank regularizer (effectiveness, efficiency). </li>
+  <li>PSD property is automatically ensured by regression (efficiency).</li>
+  <li>Kernel matrix is approximated by Nystrom method rather than fully computed (efficiency).</li>
+  <li>Precision was improved by 5% compared with state-of-the-art metric learning algorithms (LMNN, ITML, etc.). </li>
+</ul>	
+<br>
+<p align="left">Zheyun Feng, Rong Jin, and Anil K. Jain. "<i>Large-scale Image Annotation by Efficient and Robust Kernel Metric Learning</i>". In International Conference of Computer Vision (ICCV), pp. 1609-1616, 2013. </p><br>
+
+<br>
+</ul>
+
+<font color=#c80000><b>Video Feature Extraction and Content Analysis</b></font>
+<p align="left">Video processing is similar as image processing except that (i) the image quality is much worse, (ii) consecutive frames have similar images, (iii) requires to process and synchronize other media contents including audio and subtitle(document). </p>
+<ul>
+<li><span class="degree">Commercial (Advertisement) Detection in TV Programs</span> <span class="alignright">05/2013 - 08/2013 & 05/2014 - 08/2014</span></li>
+<p align="left">This project was done during my internship in Comcast Labs, DC in summers of both 2013 and 2014. It was part of the video content analysis project and it will turn out to be Comcast product soon! <a href="./downloads/projects/before2015/Intern-2014-ZFeng.pptx"><font color="white"><u><b>Presentation</b></u></font></a>, <a href="./downloads/projects/before2015/Comcast-2013.pdf"><font color="white"><u><b>Detailed feature extraction</b></u></font></a></p>
+<p align="left">This application was designed for two purposes: (1) Replace and distribute commercials in TV programs according to location and time, especially for programs produced by other companies (cbs, abc, fox, etc.), (2) Skip commercials when recording online TV show/program.</p>
+<ul style="list-style-type:disc">
+  <li>Decoded videos and synchronized audio, image and subtitle streams.</li>
+  <li>Designed a bottom-to-top commercial detection scheme, including frame, shot, and block layer feature extraction and analysis.</li>
+  <li>Extract video features, including image feature and audio feature (MFCC, HZCRR, LSTER, SF)  extraction, shot/block/program detection.</li>
+  <li>Performed logo (both solid and transparent) detection/tracking, text detection and recognition, score/timer ticker detection and tracking.</li>
+  <li>Extracted supervised information and train classifiers to detect commercial blocks for each video, using machine learning skills including decision tree, Naive bayesian, regression, sequential correction, etc.</li>
+  <li>Achieve detection precision 98.6%, recall 98.4% to 102 Movies/TV show programs 2966 video blocks.</li>
+</ul>	
+<br>
+
+
+
+<li><span class="degree">Automatic Face Recognition and Content Analysis</span> <span class="alignright">07/2010 - 01/2011</span></li>
+<p align="left">This project produced a metadata to describe the contents of a movie, including the scene, personage and corresponding descriptions, which facilitated the navigation within the video, and as well as the indexing/retrieval of movies via semantic keywords.</p>
+<ul style="list-style-type:disc">
+  <li>Shot detection based on Otsu threshold</li>
+  <li>Detected faces using Viola-Jones methods and tracked them within a shot, i.e., connecting the same faces into a path using methods including optical flow, template matching and camshaft.</li>
+  <li>Recognized the faces in the same path based on the Elastic Bunch Graph Matching algorithm. The training database was generated from the published photos of the cast.</li>
+</ul>	
+<br>
+<li><span class="degree">Chaotic Secure Communication System based on Public Wireless Network</span> <span class="alignright">04/2008 - 09/2008</span></li>
+<br>
+<ul style="list-style-type:disc">
+  <li>Compressed the audio/speech using G.723 protocol and encrypted it using Chaotic Pseudo-random Series (CPRS) algorithms.</li>
+  <li>Stored additional information in silent frames of the compressed stream, and attached water mark and authority certification in the low bytes of encrypted data.</li>
+  <li>Managed the communication between different terminals/processors, and enhanced the efficiency of the speech analysis, compression and encryption on DSP platform.</li>
+</ul>	
+<br>
+</ul>
+<br>	
+
+
+<font color=#c80000><b>Document and Image Retrieval</b></font>
+<ul>
+<li><span class="degree">Document Retrieval and Query Expansion </span> <span class="alignright">05/2012 - 08/2012</span></li>
+<p align="left">Developed a large scale document retrieval application, which improved the retrieval performance by introducing different scoring ways and query expansion. <a href="./downloads/projects/before2015/document/DocRetri.pdf"><font color="white"><u><b>Read More</b></u></font></a>, <a href="./downloads/projects/before2015/document/src/"><font color="white"><u><b>Codes</b></u></font></a></p>
+<ul style="list-style-type:disc">
+  <li> Studied and analyzed multiple scoring ways, and an Okapi BM25 based scoring way was proved to be the optimal to estimate the relevance score.</li>
+  <li>Query expansion techniques, including pseudo relevance feedback, expansion using Google returned documents, synonym library (WordNet), latent semantic indexing and random walk methods, were applied to improve the retrieval performance. The expansion was based on the document analysis results, and was restricted in a certain domain (e.x., law cases).</li>
+  <li>Basic text processing skills including tokenizing, stop words removal and stemming were used.</li>
+</ul>	
+<br>	
+
+
+<li><span class="degree">Large-scale Efficient Range Search in High Dimensional Space  </span> <span class="alignright">12/2011 - 03/2012</span></li>
+<p align="left">This work was proposed for retrieval in large scale datasets and for large scale queries.</p>
+<ul style="list-style-type:disc">
+  <li>Proposed a ransom projection based approach that converted a high dimensional range search to a sequence of one dimensional search. </li>
+  <li>Random projected the data into a lower dimensional space, which was represented by vectors randomly sampled from a Gaussian distribution. Performed range search over the newly projected space.</li>
+  <li>Conventional approach such as bysection, and KD-tree were used to speed up the search. Rademacher Represented projection space and the integration of fractal structure dramatically improved the efficiency.</li>
+  <li>State-of-the-art hashing methods were compared and analyzed.</li>
+</ul>	
+<br>
+
+<li><span class="degree">Efficient Vector Representation for Kernel Similarity   </span> <span class="alignright">09/2011 - 12/2011</span></li>
+<ul style="list-style-type:disc">
+  <li>Derived a vector representation for image, which approximated the kernel similarity and promoted the computation. The vector was generated by a RBF kernel, which projected the images via a sequence of vectors randomly sampled from a normal distribution.</li>
+  <li>The random sampled vectors played a similar role as clustering center, and the representation vector could be viewed as a histogram depending on the distance between visual words and key-points. Replacing clustering by simple random sampling dramatically improved the computation efficiency.</li>
+  <li>Similarity between images could be expressed as an expectation over a dot product of the image vectors. Mahalanobis distance was used to reduce dimensionality.</li>
+</ul>	
+<br>
+
+</ul>
+<br>
+
+
+<font color=#c80000><b>Data Classification and Clustering</b></font>
+<ul>
+
+
+<li><span class="degree">Business Risk Analysis </span> <span class="alignright">07/2015</span></li>
+<p align="left">This was a data analysis project to help reduce financial business risk, where I made many efforts to analyze the customer data, deal with problematic (missing/conflicting) data, design the algorithm and evaluate it. <a href="./downloads/projects/2015/BusinessAnalysis/presentation_zfeng.pptx"><font color="white"><u><b>Read More</b></u></font></a>, <a href="./downloads/projects/2015/BusinessAnalysis/codes/"><font color="white"><u><b>Codes & Data</b></u></font></a></p>
+<ul style="list-style-type:disc">
+  <li>Preprocessed and analyzed the data, including converting different types of data to numeric, mutating the missing elements, dealing with conflicting data, scaling/normalizing the data, etc.</li>
+  <li>Applied a ensemble of classifiers to achieve a good prediction performance.</li>
+</ul>	
+<br>
+
+<li><span class="degree">High Dimensional Classification with Fast Stochastic Gradient Descent Method </span> <span class="alignright">02/2015 - present</span></li>
+<p align="left">This is an undertaking project.</p>
+<ul style="list-style-type:disc">
+  <li> Use a stochastic gradient descent method to solve a strongly convex optimization problem in data classification tasks.</li>
+  <li>Achieve an optimal convergence rate <i>O(1/T)</i></li>
+</ul>	
+<br>	
+
+
+<li><span class="degree">ImageNet Classification with Multiple Classifiers</span> <span class="alignright">02/2013 - 04/2013</span></li>
+<p align="left">This was the course project of Pattern Recognition, where I applied the RKML algorithm (proposed in my ICCV13 paper) to multi-label classification problem and demonstrated its effectiveness and efficiency. <a href="./downloads/projects/before2015/PatternRecognition.pdf"><font color="white"><u><b>Read More</b></u></font></a></p>
+<ul style="list-style-type:disc">
+  <li>Proposed an ensemble classifier to classify over 20K images sampled from ImageNet, with accuracy achieving 91% </li>
+  <li>Multiple features including SIFT, GIST, LBP and HOG were used to better represent the image contents.</li>
+  <li>Results of multiple classifiers (Kernel regression and kernel SVM) were merged in a weighting manner.</li>
+</ul>	
+<br>
+
+<li><span class="degree">Data Clustering using Genetic Algorithms  </span> <span class="alignright">10/2012 - 12/2012</span></li>
+<p align="left">This was the course project of Evolutionary Computation, where I made many efforts to design the algorithm, analyze and evaluate it. <a href="./downloads/projects/before2015/GeneticA.pdf"><font color="white"><u><b>Read More</b></u></font></a></p>
+<ul style="list-style-type:disc">
+  <li>Proposed a genetic algorithm worked well on problem of clustering large-scale high dimensional data even when the number of cluster is large.</li>
+  <li>Two crossing set selection methods, six crossover approaches and a fine-tuning technique were used.</li>
+  <li>Computationally efficient and achieved comparable performance as the most commonly state-of-the-art works on large datasets.</li>
+</ul>	
+<br>
+
+</ul>
+<br>
+
+<font color=#c80000><b>Image Processing and Analysis</b></font>
+<ul>
+<li><span class="degree">Analysis of Cardiac MRI with Tagging Lines</span> <span class="alignright">02/2011 - 05/2011</span></li>
+<ul style="list-style-type:disc">
+  <li>Segmented and extracted the tagging lines on the magnetic resonance images. Different extraction methods were used, and the corresponding influences to the final 3D model were analyzed. </li>
+  <li>Extracted heart information using techniques like tag removal and heart contour detection.</li>
+  <li>Tagging sheets (Transverse, Sagittal and Coronal) were reconstructed from the clean tagging lines, and their deformation was tracked. Then a 3D cardiac deformation model was created based on the tagging information.</li>
+</ul>	
+<br>
+
+<li><span class="degree">Biopsy Image Analysis</span> <span class="alignright">04/2010 - 06/2010</span></li>
+<ul style="list-style-type:disc">
+  <li>Accomplished segmentation and regularization of cytological images and histological images, and extracted the typical cellular or tissue components in order to detect the cancer cellular or abnormal tissue. </li>
+  <li>Optimized the algorithm and improved the processing efficiency by adopting graph based tools including Grid, Region Adjacency Graph, Fully Connected Graph and Minimum Spanning Trees.</li>
+  <li>Improved the segmentation accuracy using methods such as K-means based on color, texture segmentation based on entropy. Both unsupervised and semi-supervised methods were employed.</li>
+</ul>	
+<br>
+
+
+<li><span class="degree">Color Transfer between Images</span> <span class="alignright">02/2010 - 04/2010</span></li>
+<ul style="list-style-type:disc">
+  <li>De-correlated the color space and adopting the color information from a photograph to a rendered image. </li>
+  <li>Corrected the color globally or to certain clusters, using statistics methods, gamma correction and space shift.</li>
+  <li>Studied and analyzed the transferring results in different color spaces, such as RGB, lab and CIECAM97s.</li>
+</ul>	
+<br>
+
+<li><span class="degree">Fingerprint Recognition System</span> <span class="alignright">03/2008 - 06/2008</span></li>
+<ul style="list-style-type:disc">
+  <li>Background deletion, special block direction, enhancement of binary incorporation, skeleton thinning. </li>
+  <li>Extracted minutiae (e.x., end minutiae and bifurcation minutiae) from thinned fingerprint images to match fingerprint. Eliminated false minutiae by edge-deleting and distance-threshold method.</li>
+</ul>	
+<br>
+</ul>
+
+
+
+</div>
+</div>
+</center>
+
+<center>
+<div id="footer">
+Department of Computer Science and Engineering<br>
+Michigan State University, East Lansing<br>
+PRIP Lab, 3208 Engineering Building<br>
+fengzheyun@gmail.com<br>
+</div>
+</center></div>
+</center>
+</body></html>
